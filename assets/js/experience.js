@@ -5,6 +5,13 @@ AOS.init();
 const experiencecards = document.querySelector(".experience-cards");
 const exp = [
   {
+    title: "Graduate Student Assistant",
+    cardImage: "assets/images/experience-page/msu.png",
+    place: "Montana State University",
+    time: "(Aug, 2024 - May 2025)",
+    desp: "<li>Delivered hands-on instruction in Node.js, React, Java, Python, and SQL to over 100 students, emphasizing full-stack development principles and best practices, resulting in a 20% boost in project outcome.</li><li> Designed and implemented 40+ coding exercises that simulated real world scenarios, including API integrations and full stack web applications, to enhance problem solving and development skills.</li><li>Mentored students on real-world projects involving front-end design, back-end logic, and database architecture, with 75% of mentees securing entry-level developer roles.</li>",
+  },
+  {
     title: "Senior Software Developer",
     cardImage: "assets/images/experience-page/hexagon.png",
     place: "Hexagon",
@@ -96,7 +103,7 @@ const mentor = [
     subtitle: "Finalist",
     image: "assets/images/experience-page/SIH.png",
     desp: "SIH is a nationwide initiative to provide students with a platform to solve some of the pressing problems we face in our daily lives, and thus inculcate a culture of product innovation and a mindset of problem-solving.I participated and presented my project",
-    href: "https://www.sih.gov.in/",
+    href: "https://media.licdn.com/dms/document/media/v2/C561FAQHLIJuiumh4aQ/feedshare-document-pdf-analyzed/feedshare-document-pdf-analyzed/0/1621197822449?e=1746662400&v=beta&t=pkKV3AoPwOIcER8Ur9-Zby_ou1IoMLlNlOA5VWNi1fw",
   },
 ];
 
