@@ -17,11 +17,14 @@ const research = [
         "M. Bhanu Sridhar, Bhargavi Marni, Sai Himaja Kinthada.A Unique Framework for Contactless Estimation of Body Vital Signs using Facial Recognition.",
     },
     abstract:
-      " The main idea of our research is to design contactless technology for the support of patients who suffer from blood pressure disorders and coronary heart diseases using machine learning approach.",
+      "As one of the consequences of COVID-19 pandemic, a lot of new technologies are developing in fast-track pace in clinical practices. The main idea of our project is to design contactless technology for the support of patients who suffer from blood pressure disorders and coronary heart diseases using machine learning approach. This may intend people to monitor their heart rate, pulse rate, respiratory life and oxygen saturation levels at an ease. The orientation of this paper is to monitor the blood pressure considering the facial changes and movements in a video to get rid of cuff-based measurement of blood pressure. We analyzed whether blood pressure can be obtained in a contactless way utilizing a novel technologies like image processing and machine learning techniques. This innovation estimates vague facial blood stream changes from video recordings captured by camera with the help of machine learning and image processing techniques.",
     absbox: "absPopup1",
+    pdfLink: "https://ijcsmc.com/docs/papers/December2021/V10I12202104.pdf"
   },
 ];
+
 AOS.init();
+
 const fillData = () => {
   let output = "";
   research.forEach(
@@ -35,6 +38,7 @@ const fillData = () => {
       citation,
       absbox,
       abstract,
+      pdfLink
     }) =>
       (output += `
             <tr data-aos="zoom-in-left"> 
@@ -58,7 +62,7 @@ const fillData = () => {
                             ABSTRACT
                         </button>
                 
-                        <button class="button button-accent button-small text-right button-abstract " type="button" data-toggle="collapse" data-target="#${citebox}" aria-expanded="false" aria-controls="${citebox}">
+                        <button class="button button-accent button-small text-right button-abstract cite-btn" type="button" data-pdf="${pdfLink}">
                             CITE
                         </button>
                     </div>
@@ -76,5 +80,16 @@ const fillData = () => {
             </tr>`)
   );
   researchTable.innerHTML = output;
+  
+  // Add event listeners to all cite buttons
+  document.querySelectorAll('.cite-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      const pdfUrl = this.getAttribute('data-pdf');
+      if (pdfUrl) {
+        window.open(pdfUrl, '_blank');
+      }
+    });
+  });
 };
+
 document.addEventListener("DOMContentLoaded", fillData);

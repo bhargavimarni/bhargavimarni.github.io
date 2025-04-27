@@ -6,6 +6,14 @@ const projectcards = document.querySelector(".projectcards");
 // Array of object for projects
 const projects = [
   {
+    title: "Echoes of Aurora",
+    cardImage: "assets/images/Aurora.png",
+    description: "Business Card built using kotlin.",
+    tagimg: "https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png",
+    Previewlink: "https://echoesofaurora.com/",
+    Githublink: "https://github.com/EchoesofAurora/EchoesOfAurora",
+  },
+  {
     title: "Business Card",
     cardImage: "assets/images/Businesscard.png",
     description: "Business Card built using kotlin.",
